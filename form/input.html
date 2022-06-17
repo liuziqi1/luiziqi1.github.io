@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>input | 万能系统</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./fireflyLogo.jpg">
+    <meta name="description" content="万能系统组件配置开发文档">
+    
+    <link rel="preload" href="./assets/css/0.styles.661f4f7d.css" as="style"><link rel="preload" href="./assets/js/app.a8650978.js" as="script"><link rel="preload" href="./assets/js/2.2c79cb97.js" as="script"><link rel="preload" href="./assets/js/12.b900f162.js" as="script"><link rel="prefetch" href="./assets/js/10.7e0ccd23.js"><link rel="prefetch" href="./assets/js/11.cb648787.js"><link rel="prefetch" href="./assets/js/13.13a164d0.js"><link rel="prefetch" href="./assets/js/14.7b38f0ee.js"><link rel="prefetch" href="./assets/js/15.fe91f486.js"><link rel="prefetch" href="./assets/js/16.682ae348.js"><link rel="prefetch" href="./assets/js/3.6294e6dc.js"><link rel="prefetch" href="./assets/js/4.06e4773f.js"><link rel="prefetch" href="./assets/js/5.4f7c863d.js"><link rel="prefetch" href="./assets/js/6.b4063a4c.js"><link rel="prefetch" href="./assets/js/7.4e61cc2e.js"><link rel="prefetch" href="./assets/js/8.26a2fdc3.js"><link rel="prefetch" href="./assets/js/9.d922feab.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.661f4f7d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><img src="./fireflyLogo.jpg" alt="万能系统" class="logo"> <span class="site-name can-hide">万能系统</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>form组件</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/./form/input.html" aria-current="page" class="active sidebar-link">input</a></li><li><a href="/./form/inputNumber.html" class="sidebar-link">inputNumber</a></li><li><a href="/./form/select.html" class="sidebar-link">select</a></li><li><a href="/./form/time.html" class="sidebar-link">time</a></li><li><a href="/./form/date.html" class="sidebar-link">date</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>table组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="input"><a href="#input" class="header-anchor">#</a> input</h1> <div class="language- extra-class"><pre class="language-text"><code>insProductInfoCode: {  // 与接口字段定义一致
+    id: 'insProductInfoCode', // 用来指定prop，v-model绑定的id
+    label: '方案编号',  //页面展示的label
+    type: 'input',
+    offset: 6,  //栅格左侧的间隔格数
+    span: 10,  //宽度
+    show: true,  //显示或隐藏，默认true
+    required: true,  //是否必填，false
+    clearable: true,  //清空按钮，默认true
+    disabled: true,  //是否禁用，默认false
+    placeholder: '',  //提示信息
+    readonly: true,  //只读，默认false
+    maxlength: 20   //原生属性，最大输入长度 
+    class: 'itemClass'  //类名
+    style: {width: 'calc(100% - 50px)'}  //行内样式
+    append: {  //输入框后面跟随按钮
+            label: '详情',
+            disabled: false,
+            type: 'button',
+            btnType: 'text',   //text或button
+            style: {
+              padding: '9px 10px'
+            },
+            // id: 'hckOrderInfoNo',
+            // url: '/order/PEorderDetails?id=',
+            // eventFn: this.hckDetails
+          },
+}         
+hckDetails(form, item) {
+    if (!form[item.id]) {
+        this.$error('订单号为空')
+        return
+    }
+        this.$router.push(`${item.url}${form[item.id]}`)
+},
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/./form/inputNumber.html">
+        inputNumber
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.a8650978.js" defer></script><script src="./assets/js/2.2c79cb97.js" defer></script><script src="./assets/js/12.b900f162.js" defer></script>
+  </body>
+</html>
